@@ -1,5 +1,5 @@
 name: Nexus
-version: 1.16.5
+version: 0.1.0-SNAPSHOT
 main: com.bb1.nexus.Loader
 api-version: 1.16
 author: BradBot_1, Sverinn
