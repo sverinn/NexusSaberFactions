@@ -1,80 +1,95 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>BB1</groupId>
-  <artifactId>nexusSaberFactions</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>nexus</name>
-  <description>An addon for nexusSaberFactions that adds the nexus for vos</description>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>BB1</groupId>
+    <artifactId>nexusSaberFactions</artifactId>
+    <version>0.0.2-SNAPSHOT</version>
+    <name>nexus</name>
+    <description>An addon for nexusSaberFactions that adds the nexus for vos</description>
 
-<properties>
-  <maven.compiler.source>1.8</maven.compiler.source>
-  <maven.compiler.target>1.8</maven.compiler.target>
-  <java.version>1.8</java.version>
-  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
- </properties>
- 
- <build>
-   <defaultGoal>clean package</defaultGoal>
-   <finalName>Nexus_By_BradBot_1</finalName>
-  </build>
- 
- <repositories>
-  <repository>
-   <id>jitpack.io</id>
-   <url>https://jitpack.io</url>
-  </repository>
-  <repository>
-   <id>dynmap</id>
-   <url>http://repo.mikeprimm.com/</url>
-  </repository>
- </repositories>
- 
- <dependencies>
-  <dependency>
-    <groupId>com.google.code.gson</groupId>
-    <artifactId>gson</artifactId>
-    <version>2.8.2</version>
-   </dependency>
-   <dependency>
-    <groupId>com.github.SaberLLC</groupId>
-    <artifactId>Saber-Factions</artifactId>
-	<version>2.6.2-STABLE</version>
-   </dependency>
-   <dependency>
-    <groupId>org.dynmap</groupId>
-    <artifactId>dynmap</artifactId>
-    <version>2.0</version>
-    <scope>provided</scope>
-    <exclusions>
-     <exclusion>
-      <artifactId>bukkit</artifactId>
-      <groupId>org.bukkit</groupId>
-     </exclusion>
-     <exclusion>
-      <artifactId>Permissions</artifactId>
-      <groupId>com.nijikokun.bukkit</groupId>
-     </exclusion>
-     <exclusion>
-      <artifactId>bPermissions</artifactId>
-      <groupId>de.bananaco</groupId>
-     </exclusion>
-     <exclusion>
-      <artifactId>EssentialsGroupManager</artifactId>
-      <groupId>org.anjocaido</groupId>
-     </exclusion>
-     <exclusion>
-      <artifactId>spoutpluginapi</artifactId>
-       <groupId>org.getspout</groupId>
-      </exclusion>
-      <exclusion>
-       <artifactId>PermissionsBukkit</artifactId>
-       <groupId>com.platymuus.bukkit.permissions</groupId>
-      </exclusion>
-      <exclusion>
-       <artifactId>PermissionsEx</artifactId>
-       <groupId>ru.tehkode</groupId>
-      </exclusion>
-     </exclusions>
-    </dependency>
-  </dependencies>
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <defaultGoal>clean package</defaultGoal>
+        <finalName>SaberFactions-Nexus</finalName>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+        <repository>
+            <id>dynmap</id>
+            <url>https://repo.mikeprimm.com/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.SaberLLC</groupId>
+            <artifactId>Saber-Factions</artifactId>
+            <version>2.6.2-STABLE</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/SaberFactions.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.20.6-R0.1-SNAPSHOT</version>
+            <type>jar</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.dynmap</groupId>
+            <artifactId>dynmap</artifactId>
+            <version>2.0</version>
+            <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <artifactId>bukkit</artifactId>
+                    <groupId>org.bukkit</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>Permissions</artifactId>
+                    <groupId>com.nijikokun.bukkit</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>bPermissions</artifactId>
+                    <groupId>de.bananaco</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>EssentialsGroupManager</artifactId>
+                    <groupId>org.anjocaido</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spoutpluginapi</artifactId>
+                    <groupId>org.getspout</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>PermissionsBukkit</artifactId>
+                    <groupId>com.platymuus.bukkit.permissions</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>PermissionsEx</artifactId>
+                    <groupId>ru.tehkode</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
 </project>
