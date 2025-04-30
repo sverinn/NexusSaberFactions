@@ -1,2 +1,4 @@
 # NexusSaberFactions
-A spigot plugin made for [vos](https://github.com/vos6434) that adds a nexus that is needed to create a faction
+This updated version of NexusSaberFactions contains bug fixes, localization and other improvements. Compatible with SaberFactions.
+
+Prebuilt jar is in target/
